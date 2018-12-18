@@ -28,3 +28,15 @@
   269  git status
   270  git push -u
   271  history > netninja.txt
+  272  ls
+  273  c9 app.js && c9 index.html
+  274  git status
+  275  git add -A
+  276  git commit -m "Array.isArray, Array.from, Array.from(titles).forEach"
+  277  git push
+  278  git checkout -b version4.0
+  279  git checkout master
+  280  ls
+  281  git merge version3.0
+  282  git push 
+  283  history > netninja2.txt
