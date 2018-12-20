@@ -13,6 +13,8 @@ list.addEventListener('click', (e) => {
 const addForm = forms['add-book'];
 addForm.addEventListener('submit', function(e){
   e.preventDefault();
+  
+  
 
   // create elements
   const value = addForm.querySelector('input[type="text"]').value;
@@ -28,8 +30,22 @@ addForm.addEventListener('submit', function(e){
   bookName.classList.add('name');
   deleteBtn.classList.add('delete');
 
-  // append to document
+  // append to DOM
   li.appendChild(bookName);
   li.appendChild(deleteBtn);
   list.appendChild(li);
 });
+
+// hide books // it does matter where you put this.
+  const hideBox = document.querySelector('#hide');
+  hideBox.addEventListener('change', function(e){
+      if (hideBox.checked){
+          list.style.display = "none";
+      } else {
+          list.style.display = "initial";
+      }
+  });
+
+
+// .getAttribute('class'), .setAttribute('class', 'name-2'), .hasAttribute('href'), .removeAttribute('class') lesson 14
+
