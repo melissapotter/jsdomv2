@@ -13,23 +13,23 @@ list.addEventListener('click', (e) => {
 const addForm = forms['add-book'];
 addForm.addEventListener('submit', function(e){
   e.preventDefault();
+
   // create elements
   const value = addForm.querySelector('input[type="text"]').value;
+  const li = document.createElement('li');
+  const bookName = document.createElement('span');
+  const deleteBtn = document.createElement('span');
 
-// create elements
-const li = document.createElement('li');
-const bookName = document.createElement('span');
-const deleteBtn = document.createElement('span');
+  // add text content
+  bookName.textContent = value;
+  deleteBtn.textContent = 'delete';
 
-//add content
-deleteBtn.textContent = 'delete';
-bookName.textContent = value;
+  // add classes
+  bookName.classList.add('name');
+  deleteBtn.classList.add('delete');
 
-// append to DOM , order does matter here. append child adds element to end of tag
-li.appendChild(bookName);
-li.appendChild(deleteBtn);
-list.appendChild(li);
-
+  // append to document
+  li.appendChild(bookName);
+  li.appendChild(deleteBtn);
+  list.appendChild(li);
 });
-
-
